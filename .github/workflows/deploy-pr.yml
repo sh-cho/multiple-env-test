@@ -3,7 +3,7 @@ name: Pull Request Build and Deploy
 on:
   pull_request:
     branches:
-      - develop
+      - main
     paths-ignore:
       - '.github/workflows/**'
       - '**.md'
