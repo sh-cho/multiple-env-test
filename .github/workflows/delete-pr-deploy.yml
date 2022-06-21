@@ -17,5 +17,5 @@ jobs:
       - name: Delete repository for temporary deployment
         uses: mktcode/delete-repository-action@v1
         with:
-          name: ${{ env.GITHUB_REPOSITORY_OWNER }}/${{ env.PR_REPO_NAME }}
+          name: ${{ github.repository_owner }}/${{ env.PR_REPO_NAME }}
           access-token: ${{ secrets.PAT }}
