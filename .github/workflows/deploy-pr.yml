@@ -19,7 +19,7 @@ jobs:
         uses: mktcode/create-repository-action@v1
         with:
           name: ${{ env.PR_REPO_NAME }}
-          org: ${{ env.GITHUB_REPOSITORY_OWNER }}
+          org: ${{ github.repository_owner }}
           access-token: ${{ secrets.PAT }}
 
   pr-build-deploy:
@@ -45,5 +45,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.PAT }}
-          external_repository: ${{ env.GITHUB_REPOSITORY_OWNER }}/${{ env.PR_REPO_NAME }}
+          external_repository: ${{ github.repository_owner }}/${{ env.PR_REPO_NAME }}
           publish_dir: ./build
