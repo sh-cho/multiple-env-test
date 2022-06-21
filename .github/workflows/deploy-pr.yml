@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pr-staging
-      url: https://${{ env.GITHUB_REPOSITORY_OWNER }}.github.io/${{ env.PR_REPO_NAME }}
+      url: https://${{ github.repository_owner }}.github.io/${{ env.PR_REPO_NAME }}
 
     steps:
       - uses: actions/checkout@v3
