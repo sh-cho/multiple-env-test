@@ -23,6 +23,8 @@ jobs:
           access-token: ${{ secrets.PAT }}
 
   pr-build-deploy:
+    permissions:
+      contents: write
     needs: create-page-host
     runs-on: ubuntu-latest
     environment:
