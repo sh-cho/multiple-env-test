@@ -9,7 +9,7 @@ on:
       - '**.md'
 
 jobs:
-  pr-build-deploy:
+  prod-build-deploy:
     runs-on: ubuntu-latest
     # environment:
     #   name: production
