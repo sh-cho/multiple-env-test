@@ -46,6 +46,6 @@ jobs:
       - name: deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.PAT }}
+          personal_token: ${{ secrets.PAT }}
           external_repository: ${{ github.repository_owner }}/${{ env.PR_REPO_NAME }}
           publish_dir: ./build
