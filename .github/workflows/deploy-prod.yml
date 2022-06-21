@@ -8,15 +8,12 @@ on:
       - '.github/workflows/**'
       - '**.md'
 
-env:
-  PR_REPO_NAME: app-pr-${{ github.event.pull_request.node_id }}
-
 jobs:
   pr-build-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: production
-      url: https://${{ env.GITHUB_REPOSITORY_OWNER }}.github.io/${{ github.event.repository.name }}
+    # environment:
+    #   name: production
+    #   url: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
 
     steps:
       - uses: actions/checkout@v3
