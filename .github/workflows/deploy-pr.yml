@@ -28,7 +28,7 @@ jobs:
     needs: create-page-host
     runs-on: ubuntu-latest
     environment:
-      name: pr-staging
+      name: pr-staging-${{ github.event.pull_request.node_id }}
       url: https://${{ github.repository_owner }}.github.io/${{ env.PR_REPO_NAME }}
 
     steps:
